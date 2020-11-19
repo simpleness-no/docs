@@ -5,7 +5,6 @@ import PostBody from '../../components/post-body'
 import MoreStories from '../../components/more-stories'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
-import Comments from '../../components/comments'
 import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
@@ -42,9 +41,6 @@ export default function Post({ post, morePosts, preview }) {
               />
               <PostBody content={post.body} />
             </article>
-
-            <Comments comments={post.comments} />
-            <Form _id={post._id} />
 
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
